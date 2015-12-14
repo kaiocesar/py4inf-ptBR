@@ -1,20 +1,20 @@
 % LaTeX source for ``Python for Informatics: Exploring Information''
 % Copyright (c)  2010-  Charles R. Severance, All Rights Reserved
 
-\chapter{Files}
+\chapter{Arquivos}
 
-\index{file}
+\index{arquivo}
 \index{type!file}
 
 
-\section{Persistence}
+\section{Persistência}
 
-\index{persistence}
-\index{secondary memory}
+\index{persistência}
+\index{memória secundária}
 
-So far, we have learned how to write programs and communicate 
-our intentions to the {\bf Central Processing Unit} using conditional
-execution, functions, and iterations.  We have learned how to 
+Até agora, temos aprendido como escrever programas e comunicar nossas interpretações para a {\bf unidade central de processamento} usando execução condicional, funções e iterações.  
+Temos aprendido como criar e usar estruturas de dados na {\bf Memoria principal}. O CPU e memória são onde nosso software trabalha e executa. Estes são o
+We have learned how to 
 create and use data structures in the {\bf Main Memory}.  The CPU 
 and memory are where our software works and runs.  It is where 
 all of the ``thinking'' happens.  
@@ -40,7 +40,7 @@ those we create in a text editor.  Later we will see how to work
 with database files which are binary files, specifically designed to be read
 and written through database software.
 
-\section{Opening files}
+\section{Abertura de arquivos}
 \index{file!open}
 \index{open function}
 \index{function!open}
@@ -63,7 +63,7 @@ You can download this file from
 \end{verbatim}
 \afterverb
 %
-\index{file handle}
+\index{manipulação de arquivos}
 If the {\tt open} is successful, the operating system returns us a 
 {\bf file handle}.  The file handle is not the actual data contained
 in the file, but instead it is a ``handle'' that we can use to 
@@ -90,12 +90,10 @@ Later we will use {\tt try} and {\tt except} to deal more gracefully
 with the situation where we attempt to open a file that does 
 not exist.
 
-\section{Text files and lines}
+\section{Arquivos de texto e linhas}
+Um arquivo de texto pode ser pensado como uma sequencia de linhas, bem como uma string Python
+pode ser pensada como uma sequencia de caracteres. Por exemplo, este é um amostra de um arquivo de texto que registra a atividade de email de vários individuos em uma equipe de desenvolvimento de projeto de código aberto.
 
-A text file can be thought of as a sequence of lines, much like a Python
-string can be thought of as a sequence of characters.  For example, this
-is a sample of a text file which records mail activity from various
-individuals in an open source project development team:
 
 \beforeverb
 \begin{alltt}
@@ -173,7 +171,7 @@ the end of each line that marks the end of the line.
 So the newline character separates the characters 
 in the file into lines.
 
-\section{Reading files}
+\section{Leitura de arquivo}
 
 \index{file!reading}
 \index{counter}
@@ -250,7 +248,7 @@ If the file is too large to fit in main memory, you should write
 your program to read the file in chunks using a {\tt for} or {\tt while}
 loop.
 
-\section{Searching through a file}
+\section{Buscando através de um arquivo}
 
 When you are searching through data in a file, it
 is a very common pattern to read through a file, ignoring most
@@ -537,7 +535,7 @@ our solution to be elegant and to be appreciated as
 elegant by our peers.
 
 
-\section{Writing files}
+\section{Escrevendo arquivo}
 
 \index{file!writing}
 
@@ -656,7 +654,7 @@ could write one yourself.
 
 % TBD - Doesn't Python take care of this for us????
 
-\section{Glossary}
+\section{glossary}
 
 \begin{description}
 
@@ -680,9 +678,10 @@ is released.
 \index{Quality Assurance}
 \index{QA}
 
-\item[text file:] A sequence of characters stored in permanent
-storage like a hard drive.
-\index{text file}
+\item[Arquivo de texto:]
+Uma sequencia de caracteres armazenados em no armazenamento permanente como um disco rigido.
+ 
+\index{arquivo de texto}
 
 \end{description}
 
@@ -690,9 +689,8 @@ storage like a hard drive.
 \section{Exercises}
 
 \begin{ex}
-Write a program to read through a file and print the contents 
-of the file (line by line) all in upper case.  Executing the program 
-will look as follows:
+Escreva um programa para ler um arquivo e imprimir o conteúdo
+do arquivo (linha a linha) todos em maíusculo. Executando o programa, ficará da seguinte forma:
 
 \beforeverb
 \begin{verbatim}
@@ -706,14 +704,14 @@ RECEIVED: FROM MURDER (MAIL.UMICH.EDU [141.211.14.90])
 \end{verbatim}
 \afterverb
 %
-You can download the file from
+você pode baixar o arquivo em 
 \url{www.py4inf.com/code/mbox-short.txt}
 \end{ex}
 
 \begin{ex}
-Write a program 
-to prompt for a file name, and then read through the file 
-and look for lines of the form:
+Escreva um program 
+para solicitar um nome de arquivo e em seguida ler o arquivo
+e olhar para as linhas do formulário:
 
 \beforeverb
 \begin{alltt}
@@ -743,6 +741,13 @@ Test your file on the {\tt mbox.txt} and {\tt mbox-short.txt} files.
 
 
 \begin{ex}
+Às vezes quando programadores ficam entediados ou querem ter um pouco de diversão,
+eles adicionam um inofensivo {\bf Easter Egg} para o seu programa (\url{en.wikipedia.org/wiki/Easter_egg_(media)}) que solicita ao usuário 
+um nome para arquivo para que ele imprima uma mensagem engraçada quando o usuário digitar o 
+exato nome do arquivo ``na na boo boo''. O programa deve se comportar normlamente para todos
+os outros arquivos que existem e não existem. Aqui está um exemplo de execução do programa.
+
+
 Sometimes when programmers get bored or want to have a bit of fun,
 they add a harmless {\bf Easter Egg} to their program 
 (\url{en.wikipedia.org/wiki/Easter_egg_(media)}). Modify the program
