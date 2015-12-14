@@ -1,7 +1,7 @@
 % LaTeX source for ``Python for Informatics: Exploring Information''
 % Copyright (c)  2010-  Charles R. Severance, All Rights Reserved
 
-\chapter{Arquivos}
+\chapter{Files}
 
 \index{arquivo}
 \index{type!file}
@@ -13,37 +13,40 @@
 \index{memória secundária}
 
 Até agora, temos aprendido como escrever programas e comunicar nossas interpretações para a {\bf unidade central de processamento} usando execução condicional, funções e iterações.  
-Temos aprendido como criar e usar estruturas de dados na {\bf Memoria principal}. O CPU e memória são onde nosso software trabalha e executa. Estes são o
-We have learned how to 
-create and use data structures in the {\bf Main Memory}.  The CPU 
-and memory are where our software works and runs.  It is where 
-all of the ``thinking'' happens.  
 
-But if you recall from our hardware architecture discussions,
-once the power is turned off, anything stored in either
-the CPU or main memory is erased.  So up to now, our
-programs have just been transient fun exercises to learn Python.
+Temos aprendido como criar e usar estruturas de dados na {\bf Memoria principal}. O CPU e memória são onde nosso software trabalha e executa. É onde todo o ``thinking'' acontece.
+
+Mas se você se lembrar da nossa discussão sobre arquitetura de hardwares, 
+uma vez que a energia está desliga, qualquer coisa armazenada na CPU ou memória principal são apagados. 
+Então, até agora, nossos programas tem sido apenas transitórios e divertidos para aprender Python.
 
 \beforefig
 \centerline{\includegraphics[height=2.50in]{figs2/arch3.eps}}
 \afterfig
 
-In this chapter, we start to work with {\bf Secondary Memory} 
-(or files).
-Secondary memory is not erased even when the power is turned off.  
-Or in the case of a USB flash drive, the
-data we write from our programs can be removed from the 
-system and transported to another system.
+Neste capítulo, iniciaremos o trabalho como {\bf memória secundária}
+(ou arquivos).
+Memória secundária não é apagada mesmo quando a energia é interrompida.
+ou no caso de um flash drive USB, os dados que escrevemos nossos programas pode ser removidos de um sistema e transportados para outro sistema.
 
-We will primarily focus on reading and writing text files such as 
-those we create in a text editor.  Later we will see how to work
-with database files which are binary files, specifically designed to be read
-and written through database software.
+Vamos primeiramente focar na leitura e escrita de arquivos de texto, tal como
+aqueles editores de texto criam. Em seguida vamos ver como trabalhar
+com arquivos de banco de dados, que são arquivos binários, especificamente desenhados para serem lidos
+e escritos por softwares de banco de dados.
 
-\section{Abertura de arquivos}
+
+\section{Opening files}
 \index{file!open}
 \index{open function}
 \index{function!open}
+
+
+Quan queremos ler ou escrever um arquivo (nos referimos em seu disco rígido), primeiro 
+devemos {\br abrir} o arquivo. Ao abrir o arquivo, comunicamos com o sistema operacional,
+que sabe onde está os dados armazenados. Quando você abre um arquivo, você está perguntando 
+para o sistema operacional onde encontrar o arquivo pelo nome e assegurar-se que ele existe.
+Neste exemplo, abriremos o arquivo {\tt mbox.txt}, que deve ser armazenado na mesma pasta
+que iniciou o Python. 
 
 When we want to read or write a file (say on your hard drive), we first
 must {\bf open} the file.  Opening the file communicates with your operating
@@ -777,3 +780,5 @@ programs---this is just an exercise.
 
 \end{ex}
 
+\]
+\end{document}
